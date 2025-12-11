@@ -1,0 +1,10 @@
+diploiVersion: v1.0
+type: starter
+name: React
+description: A modern, production-ready template for building full-stack React applications using React Router. AI friendly, SSR, TailwindCSS, TypeScript.
+components:
+  - name: React
+    identifier: react
+    folder: /
+    package: https://github.com/diploi/component-react-vite#v19.1.1
+addons: []
