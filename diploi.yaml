@@ -7,4 +7,5 @@ components:
     identifier: react
     folder: /
     package: https://github.com/diploi/component-react-vite#v19.1.1
+    prebuildImage: ghcr.io/diploi/starter-react/react:main
 addons: []
