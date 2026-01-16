@@ -1,14 +1,18 @@
 diploiVersion: v1.0
 type: starter
-name: React
+name: Web App
 description: A modern, production-ready template for building full-stack React applications using React Router. AI friendly, SSR, TailwindCSS, TypeScript.
-previewImageUrls: [.diploi/preview-1.jpg, .diploi/preview-2.jpg]
+previewImageUrls: [preview-1.jpg, preview-2.jpg]
 components:
   - name: React
     identifier: react
     folder: /
     package: https://github.com/diploi/component-react-vite#v19.1.1
     prebuildImage: ghcr.io/diploi/starter-react/react:[tag]
+    env:
+      include:
+        - supabase.REST_INTERNAL_URL:SUPABASE_URL
+        - supabase.ANON_KEY:SUPABASE_ANON_KEY
   - name: Supabase
     identifier: supabase
     package: https://github.com/diploi/component-supabase#v2025.06
