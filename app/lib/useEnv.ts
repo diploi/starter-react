@@ -19,5 +19,5 @@ export async function loader() {
 export function useEnv() {
   const matches = useMatches();
   const root = matches[0]; // root route match
-  return (root?.data as any)?.env as Env;
+  return (root?.loaderData as any)?.env as Env;
 }

@@ -3,11 +3,17 @@ type: starter
 name: Web App
 description: A modern, production-ready template for building full-stack React applications using React Router. AI friendly, SSR, TailwindCSS, TypeScript.
 previewImageUrls: [preview-1.jpg, preview-2.jpg, preview-3.jpg]
+development:
+  env:
+    include:
+      - supabase.APP_ENDPOINT:SUPABASE_URL
+      - supabase.ANON_KEY:SUPABASE_ANON_KEY
+      - supabase.POSTGRES_URL:SUPABASE_POSTGRES_URL
 components:
   - name: React
     identifier: react
     folder: /
-    package: https://github.com/diploi/component-react-vite#v19.2.4-ports
+    package: https://github.com/diploi/component-react-vite#v19.2.6
     prebuildImage: public.ecr.aws/p8t2q7f4/diploi/starter-web-app/react:[tag]
     env:
       include:
@@ -15,6 +21,6 @@ components:
         - supabase.ANON_KEY:SUPABASE_ANON_KEY
   - name: Supabase
     identifier: supabase
-    package: https://github.com/diploi/component-supabase#v2026.02
+    package: https://github.com/diploi/component-supabase#v2026.02-patch.1
     prebuildImage: public.ecr.aws/p8t2q7f4/diploi/starter-web-app/supabase:[tag]
 addons: []
